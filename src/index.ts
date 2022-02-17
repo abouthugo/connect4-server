@@ -11,7 +11,7 @@ app.set("port", PORT);
 io.origins("*:*");
 
 io.on("connection", (socket) => {
-  GameConnection(socket);
+  GameConnection(io, socket);
 });
 
 app.get("/", (req, res) => {
